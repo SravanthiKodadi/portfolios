@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Editkaro.in Portfolio</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0f172a;
+color:white;
+}
+
+header{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1200');
+background-size:cover;
+background-position:center;
+}
+
+.hero h1{
+font-size:4rem;
+color:#38bdf8;
+}
+
+.hero p{
+font-size:1.2rem;
+margin:20px 0;
+}
+
+.btn{
+display:inline-block;
+padding:12px 25px;
+background:#38bdf8;
+color:white;
+text-decoration:none;
+border-radius:30px;
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.1);
+background:#0284c7;
+}
+
+section{
+padding:80px 8%;
+}
+
+.section-title{
+text-align:center;
+font-size:2.5rem;
+margin-bottom:30px;
+color:#38bdf8;
+}
+
+.filter-buttons{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:10px;
+margin-bottom:40px;
+}
+
+.filter-btn{
+padding:10px 20px;
+border:none;
+background:#1e293b;
+color:white;
+border-radius:20px;
+cursor:pointer;
+transition:.3s;
+}
+
+.filter-btn:hover{
+background:#38bdf8;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+background:#1e293b;
+border-radius:15px;
+overflow:hidden;
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 20px #38bdf8;
+}
+
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.card-content{
+padding:15px;
+}
+
+.card h3{
+margin-bottom:10px;
+}
+
+.about{
+text-align:center;
+line-height:1.8;
+font-size:1.1rem;
+}
+
+.contact{
+text-align:center;
+}
+
+.contact p{
+margin:10px 0;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:#020617;
+}
+
+@media(max-width:768px){
+.hero h1{
+font-size:2.5rem;
+}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="hero">
+<h1>Editkaro.in</h1>
+<p>Creative Video Editing & Social Media Marketing Agency</p>
+<a href="#portfolio" class="btn">View Portfolio</a>
+</div>
+</header>
+
+<section id="portfolio">
+<h2 class="section-title">Our Portfolio</h2>
+
+<div class="filter-buttons">
+<button class="filter-btn" onclick="filterSelection('all')">All</button>
+<button class="filter-btn" onclick="filterSelection('short')">Short Form</button>
+<button class="filter-btn" onclick="filterSelection('gaming')">Gaming</button>
+<button class="filter-btn" onclick="filterSelection('football')">Football</button>
+<button class="filter-btn" onclick="filterSelection('anime')">Anime</button>
+<button class="filter-btn" onclick="filterSelection('ads')">Ads</button>
+</div>
+
+<div class="gallery">
+
+<div class="card filter short">
+<img src="https://picsum.photos/400/300?random=1">
+<div class="card-content">
+<h3>Short Form Reel</h3>
+<p>Instagram & YouTube Shorts Editing</p>
+</div>
+</div>
+
+<div class="card filter gaming">
+<img src="https://picsum.photos/400/300?random=2">
+<div class="card-content">
+<h3>Gaming Edit</h3>
+<p>High-energy gaming montage</p>
+</div>
+</div>
+
+<div class="card filter football">
+<img src="https://picsum.photos/400/300?random=3">
+<div class="card-content">
+<h3>Football Highlights</h3>
+<p>Professional sports editing</p>
+</div>
+</div>
+
+<div class="card filter anime">
+<img src="https://picsum.photos/400/300?random=4">
+<div class="card-content">
+<h3>Anime Edit</h3>
+<p>Cinematic anime transitions</p>
+</div>
+</div>
+
+<div class="card filter ads">
+<img src="https://picsum.photos/400/300?random=5">
+<div class="card-content">
+<h3>eCommerce Ad</h3>
+<p>Product marketing advertisement</p>
+</div>
+</div>
+
+<div class="card filter short">
+<img src="https://picsum.photos/400/300?random=6">
+<div class="card-content">
+<h3>Long Form Video</h3>
+<p>YouTube Documentary Editing</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2 class="section-title">About Editkaro.in</h2>
+<div class="about">
+<p>
+Editkaro.in is a creative video editing and social media marketing agency.
+We specialize in short-form videos, long-form content, gaming videos,
+football edits, anime edits, documentary-style videos, color grading,
+and eCommerce advertisements.
+</p>
+</div>
+</section>
+
+<section>
+<h2 class="section-title">Contact Us</h2>
+<div class="contact">
+<p>📧 contact@editkaro.in</p>
+<p>📱 +91 9876543210</p>
+<p>🌐 www.editkaro.in</p>
+</div>
+</section>
+
+<footer>
+<p>© 2026 Editkaro.in | Portfolio Website</p>
+</footer>
+
+<script>
+filterSelection("all");
+
+function filterSelection(category){
+let cards=document.getElementsByClassName("filter");
+
+for(let i=0;i<cards.length;i++){
+
+if(category==="all"){
+cards[i].style.display="block";
+}
+else{
+if(cards[i].className.indexOf(category)>-1){
+cards[i].style.display="block";
+}
+else{
+cards[i].style.display="none";
+}
+}
+}
+}
+</script>
+
+</body>
+</html>
